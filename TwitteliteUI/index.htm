@@ -42,10 +42,11 @@
 			<div class="mainpanel">
 				<div class = "resultdiv">
 					<form id ="posttweet"action="">
-						<input type="text" id="username" maxlength="20" size="20" placeholder="Username">
+						<input type="text" id="username" maxlength="20" size="20" placeholder="Username" required autofocus>
 						<input id="postBtn" type="button" value="Tweet">
 						</br>
-						<input type="text" id="content" rows="5" cols="40" placeholder="Tweet content ..."  > 				
+						<textarea id="content" rows="5" cols="40" placeholder="Tweet content ..." maxlength="140" autofocus >
+						</textarea>
 					</form>
 					<h3> Your Posts : </h3>
 				</div>

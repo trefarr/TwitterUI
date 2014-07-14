@@ -4,13 +4,6 @@ $(document).ready(function() {
 	$("#postBtn").click(function() { 
 		var username = $("#username").val();
 		var content = $("#content").val();
-		if(username == "" || username == null || content == "" || content == null){
-				alert ("Invalid Input. The username or content field is empty!");
-			}
-		else if (username.length > 140 || content.length >140){
-		     alert ("The input has exceeded 140 characters! ");
-		}
-		else{
 		$.ajax({
 			type: "POST",
 			url: "http://localhost:8080/twitterlite-ws-1.0-SNAPSHOT/tweets",
@@ -21,9 +14,7 @@ $(document).ready(function() {
 			success: function(data, textStatus , xhr) {
 				printMessage(data)
 			}
-			
 		});
-		}
 	});
 });
 
@@ -56,12 +47,6 @@ $(document).ready(function() {
 	$("#searchBtn").click(function() { 
 		var offset = $("#offset").val();
 		var limit = $("#limit").val();
-		
-		if(limit <=0 ||offset <0 || limit == "" || offset == ""){ 
-				alert ("Invalid Input. The fields could not be left empty. The limit must be greater than 0. The offset must be equal or greater than 0.");
-			}
-		else
-		{
 		$.ajax({
 			type: "GET",
 			url: "http://localhost:8080/twitterlite-ws-1.0-SNAPSHOT/messages",
@@ -77,7 +62,6 @@ $(document).ready(function() {
 				});
 			}
 		});
-		}
 	});
 });
 
@@ -88,11 +72,6 @@ $(document).ready(function() {
 		var username = $("#mention").val();
 		var offset = $("#offset").val();
 		var limit = $("#limit").val();
-		if(username == "" || username == null || limit <=0 ||offset <0 || limit == "" || offset == "" ){  
-				alert ("Invalid Input. The fields could not be left empty. The limit must be greater than 0. The offset must be equal or greater than 0.");
-			}
-		else
-		{
 		$.ajax({
 			type: "GET",
 			url: "http://localhost:8080/twitterlite-ws-1.0-SNAPSHOT/messages/mention",
@@ -108,8 +87,7 @@ $(document).ready(function() {
 					console.log(data[index]);
 				});
 			}
-		  });
-		}
+		});
 	});
 });
 
@@ -119,12 +97,6 @@ $(document).ready(function() {
 		var hashtags = $("#hashtags").val();
 		var offset = $("#offset").val();
 		var limit = $("#limit").val();
-		
-		if(hashtags == "" || hashtags == null || limit <=0 ||offset <0 || limit == "" || offset == ""){  
-				alert ("Invalid Input. The fields could not be left empty. The limit must be greater than 0. The offset must be equal or greater than 0.");
-			}
-		else
-		{
 		$.ajax({
 			type: "GET",
 			url: "http://localhost:8080/twitterlite-ws-1.0-SNAPSHOT/messages/hashtags",
@@ -140,8 +112,7 @@ $(document).ready(function() {
 					console.log(data[index]);
 				});
 			}
-		 });
-		}
+		});
 	});
 });
 
