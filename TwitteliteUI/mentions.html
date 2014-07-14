@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)file:///C:/Users/Owner/Desktop/TwitterLiteUIV2.htm -->
+<html>
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="keywords" content="Twitter, TwitterLite, Hashtags, mentions, Message">
+	<meta name="description" content="Our Version of Twitter">
+	<meta name="author" content="Trevor Farrugia and Chiara Attard">
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="TwitterLiteJS.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="twitterstyle.css">
+	
+	<title>TwitterLite</title>
+
+</head>
+
+<body>
+	<div id="container">
+		<header class="toppanel">
+			<h1 id="title"><a name="home">TwitterLite</a></h1>
+		</header>
+		
+		<div class = "lefttoppanel">
+			<img src="TwitterLiteUIV2_files/logo.jpg" width="250" height="153"/>  
+		</div>
+
+		<div id='cssmenu'>
+			<ul>
+				<li><a href="http://localhost:8080/TwitteliteUI/"><span>Post</span></a></li>
+				<li><a href = "http://localhost:8080/TwitteliteUI/message.html"><span>Show All Messages</span></a></li>
+				<li><a href="http://localhost:8080/TwitteliteUI/hashtags.html"><span>HashTags</span></a></li>
+				<li class='active'><a href="http://localhost:8080/TwitteliteUI/mentions.html"><span>Mentions</span></a></li>
+			</ul>
+		</div>
+
+		<div class="mainpanel">
+			<div class = "resultdiv">
+				Username: <input type="text" id="mention">
+				Offset: <input type="text" id="offset">
+				Limit: <input type="text" id="limit">
+				<input id="mentionsSearchBtn" type="button" value="Search">
+				<h3> Search Results: </h3>
+			</div>
+		</div>	
+
+		<noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+</body></html>
