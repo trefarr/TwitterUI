@@ -1,0 +1,11 @@
+{
+  "name": "TwitteliteUI",
+  "version": "0.0.0",
+  "authors": [
+    "trefarr <trevor.farrugia@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}
